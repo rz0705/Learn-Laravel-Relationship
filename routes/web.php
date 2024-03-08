@@ -1,8 +1,9 @@
 <?php
 
-use App\Http\Controllers\PostController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\PostController;
+use App\Http\Controllers\CommentController;
 
 
 /*
@@ -20,10 +21,12 @@ Route::get('/', function () {
     return redirect('users');
 });
 
-Route::get('users', [UserController::class, 'index']);
+Route::get('users', [UserController::class, 'index'])->name('users');
 
 Route::get('user/{id}/posts', [PostController::class, 'getUserPosts'])->name('getUserPosts');
 
-Route::get('posts', [PostController::class, 'index']);
+Route::get('posts', [PostController::class, 'index'])->name('posts');
 
 Route::get('user/{id}/posts/latest', [PostController::class, 'getLatestPostFirst'])->name('getLatestPostFirst');
+
+Route::get('comments', [CommentController::class, 'index'])->name('comments');

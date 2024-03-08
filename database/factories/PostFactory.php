@@ -17,6 +17,7 @@ class PostFactory extends Factory
     public function definition(): array
     {
         return [
+            "image"=> "https://www.w3schools.com/html/pic_trulli.jpg",
             "title"=> $this->faker->sentence,
             "description"=> $this->faker->paragraph,
         ];

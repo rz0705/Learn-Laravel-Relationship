@@ -1,4 +1,4 @@
-{{-- @dd($userlatestpost); --}}
+@include('layout.navbar')
 
 <!DOCTYPE html>
 <html lang="en">
@@ -29,6 +29,7 @@
         bottom: 0;
         left: 50%;
         transform: translateX(-50%);
+        padding: 10px;
     }
 </style>
 
