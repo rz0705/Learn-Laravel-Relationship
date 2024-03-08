@@ -1,8 +1,10 @@
+{{-- @dd($userlatestpost); --}}
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <title>All Posts</title>
+    <title>Latest Posts</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -33,9 +35,9 @@
 <body>
     {{-- @dd($posts); --}}
     <div class="container-fluid px-5 pt-3">
-        <h4 class="text-center fw-bold border-bottom pb-3"> Posts / Has Many Relationship</h4>
+        <h4 class="text-center fw-bold border-bottom pb-3"> Latest Posts / Has One of Many Relationship</h4>
         <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
-            @forelse ($posts as $post)            
+            @forelse ($userlatestpost as $post)            
                 <div class="col">
                     <div class="card post-card">
                         <div class="card-body">

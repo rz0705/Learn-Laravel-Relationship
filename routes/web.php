@@ -26,4 +26,4 @@ Route::get('user/{id}/posts', [PostController::class, 'getUserPosts'])->name('ge
 
 Route::get('posts', [PostController::class, 'index']);
 
-// Route::get('postbyid', [PostController::class, 'byid']);
+Route::get('user/{id}/posts/latest', [PostController::class, 'getLatestPostFirst'])->name('getLatestPostFirst');

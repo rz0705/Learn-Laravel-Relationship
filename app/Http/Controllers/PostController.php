@@ -28,11 +28,11 @@ class PostController extends Controller
         return view('userposts', compact('userposts'));
     }
 
-    // public function byid(){
-    //     $user = User::find(33); // Assuming the user with ID 1 exists
-    //     // dd($user);
-    //     $posts = $user->posts;
+    public function getLatestPostFirst($userId){
+        $user = User::find($userId);
+        $userlatestpost = $user->getlatestpostfirst()->get();
+        // dd($userlatestpost);
 
-    //     dd($posts);
-    // }
+        return view('latestposts',compact('userlatestpost'));
+    }
 }

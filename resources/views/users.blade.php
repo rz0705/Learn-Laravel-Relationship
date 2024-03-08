@@ -36,8 +36,8 @@
                             <td>{{ $user->id }} </td>
                                 <td><a href="{{route('getUserPosts', $user->id)}}">{{ $user->name }}</a></td>
                             <td>
-                                <p>Primary: {{ $user->email }} <br />
-                                    Alternate: {{ $user->userProfile->alternate_email ?? '-' }}
+                                <p>Primary: <a href="mailto:{{ $user->email }}">{{ $user->email }}</a><br />
+                                    Alternate: <a href="mailto:{{ $user->userProfile->alternate_email ?? '-' }}">{{ $user->userProfile->alternate_email ?? '-' }}
                                 </p>
                             </td>
                             <td>
@@ -57,7 +57,7 @@
                     @empty
                         <tr>
                             <td colspan="6">
-                                <p class="text-danger">No data found </p>
+                                <p class="text-danger">No post found </p>
                             </td>
                         </tr>
                     @endforelse

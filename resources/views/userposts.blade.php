@@ -58,7 +58,7 @@
             @empty
             <tr>
                 <td colspan="6">
-                    <p class="text-danger">No data found </p>
+                    <p class="text-danger">No post found </p>
                 </td>
             </tr>
             @endforelse
