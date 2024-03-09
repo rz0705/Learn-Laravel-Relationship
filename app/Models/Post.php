@@ -22,4 +22,16 @@ class Post extends Model
     public function comments(){
         return $this->hasMany(Comment::class);
     }
+
+    public function getlatestpostfirst(){
+        return $this->hasMany(Post::class,'user_id', 'id')->latest();
+    }
+
+    public function getcommentsonpost(){
+        return $this->hasManyThrough(Comment::class, Post::class,'user_id', 'post_id', 'id','id');
+    }
 }
+  
+
+
+Get comments for post with post data

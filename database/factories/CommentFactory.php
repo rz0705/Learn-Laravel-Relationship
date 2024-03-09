@@ -18,8 +18,7 @@ class CommentFactory extends Factory
     {
         return [
             'post_id' => 1,
-            'user_id' => 1,
-            'body' => $this->faker->sentence
+            'comment' => $this->faker->sentence,
         ];
     }
 }

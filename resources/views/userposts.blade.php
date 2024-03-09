@@ -30,7 +30,7 @@
                             <p class="card-text">Post Description: {{ $post->description ?? '-' }}</p>
                             <p class="card-text">Uploaded on:{{$post->created_at ?? '-'}}</p>
                             <div class="card-button">
-                                <a href="" class="btn btn-outline-success">Add Comment</a>
+                                <a href="{{ route('getCommentsByPost', ['id' => $post->id]) }}" class="btn btn-outline-success">View Comments</a>
                             </div>
                         </div>
                     </div>

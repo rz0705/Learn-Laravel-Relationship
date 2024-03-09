@@ -27,6 +27,6 @@ Route::get('user/{id}/posts', [PostController::class, 'getUserPosts'])->name('ge
 
 Route::get('posts', [PostController::class, 'index'])->name('posts');
 
-Route::get('user/{id}/posts/latest', [PostController::class, 'getLatestPostFirst'])->name('getLatestPostFirst');
-
 Route::get('comments', [CommentController::class, 'index'])->name('comments');
+
+Route::get('post/{id}/get/comments',[CommentController::class,'getCommentsByPost'])->name('getCommentsByPost');

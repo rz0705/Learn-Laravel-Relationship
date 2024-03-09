@@ -14,7 +14,7 @@ class PostController extends Controller
      */
     public function index()
     {
-        $posts = Post::with('user')->get(); //run less query
+        $posts = Post::with('user')->latest()->get(); //run less query
         // $posts = Post::get(); //run query for every post
         // dd($posts);
         // dd($posts[0]->user);
@@ -28,13 +28,5 @@ class PostController extends Controller
         // dd($userposts);
 
         return view('userposts', compact('userposts'));
-    }
-
-    public function getLatestPostFirst($userId){
-        $user = User::find($userId);
-        $userlatestpost = $user->getlatestpostfirst()->get();
-        // dd($userlatestpost);
-
-        return view('latestposts',compact('userlatestpost'));
     }
 }
