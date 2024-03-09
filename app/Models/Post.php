@@ -31,7 +31,3 @@ class Post extends Model
         return $this->hasManyThrough(Comment::class, Post::class,'user_id', 'post_id', 'id','id');
     }
 }
-  
-
-
-Get comments for post with post data
